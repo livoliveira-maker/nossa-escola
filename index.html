@@ -8,24 +8,71 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        div {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px 0;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
         }
-        
-        figure {
+
+        #container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1a237e;
+        }
+
+        .subtitulo {
+            font-weight: bold;
+            color: #303f9f;
+        }
+
+        .pergunta-chave {
+            font-size: 1.2em;
             margin: 20px 0;
+            color: #d32f2f;
+        }
+
+        .item-card {
+            background: #fff;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         img {
-            width: 30%;
-            max-width: 400px;
+            width: 50%;
+            max-width: 350px;
             height: auto;
+            border-radius: 6px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #000;
+        }
+
+        .descricao {
+            margin-top: 12px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #555;
+            text-align: justify;
+        }
+
+        .mensagem-final {
+            background-color: #e8eaf6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 1.05em;
+            line-height: 1.6;
         }
     </style>
 
@@ -35,43 +82,83 @@
     <div id="container">
 
         <h1><b><u> GAME DO SABER </u></b></h1>
-        <p>NOSSA ESCOLA NOSSO COMPROMISSO</p>
-        <p style="text-align: center;"> <u>O QUE NÓS PODEMOS FAZER PARA TORNAR NOSSA ESCOLA AINDA MELHOR?</u></p>
-        
-        <figure>
-            <img src="carteira.jpg" alt="Carteira">
-            <figcaption><b>Antes e depois - Carteira</b></figcaption>
-        </figure>
+        <p class="subtitulo">NOSSA ESCOLA, NOSSO COMPROMISSO</p>
+        <p class="pergunta-chave"><u>O QUE NÓS PODEMOS FAZER PARA TORNAR NOSSA ESCOLA AINDA MELHOR?</u></p>
 
-        <figure>
-            <img src="computador.jpg" alt="Computador">
-            <figcaption><b>Antes e depois - Computador</b></figcaption>
-        </figure>
+        <!-- CARTEIRA -->
+        <div class="item-card">
+            <figure>
+                <img src="carteira.jpg" alt="Carteira">
+                <figcaption><b>Antes e Depois: Carteiras Escolares</b></figcaption>
+            </figure>
+            <p class="descricao">
+                As carteiras e mesas são ferramentas diretas do nosso aprendizado diário. Evitar riscar, colar chicletes ou danificar o mobiliário garante um ambiente confortável e limpo para nós e para as próximas turmas. Preservar as carteiras é demonstrar respeito com quem compartilha a sala conosco.
+            </p>
+        </div>
 
-        <figure>
-            <img src="fone de ouvido.jpg" alt="Fone de ouvido">
-            <figcaption><b>Antes e depois - Fone de ouvido</b></figcaption>
-        </figure>
+        <!-- COMPUTADOR -->
+        <div class="item-card">
+            <figure>
+                <img src="computador.jpg" alt="Computador">
+                <figcaption><b>Antes e Depois: Laboratório de Informática</b></figcaption>
+            </figure>
+            <p class="descricao">
+                Os computadores nos conectam com o conhecimento global e pesquisas modernas. Usar os equipamentos com cuidado, não danificar periféricos e relatar qualquer problema técnico garante que o laboratório continue acessível para todos os alunos ampliarem suas habilidades digitais.
+            </p>
+        </div>
 
-        <figure>
-            <img src="quadro.jpg" alt="Quadro">
-            <figcaption><b>Antes e depois - Quadro</b></figcaption>
-        </figure>
+        <!-- FONE DE OUVIDO -->
+        <div class="item-card">
+            <figure>
+                <img src="fone de ouvido.jpg" alt="Fone de ouvido">
+                <figcaption><b>Antes e Depois: Fones de Ouvido e Recursos Acessíveis</b></figcaption>
+            </figure>
+            <p class="descricao">
+                Os fones de ouvido auxiliam em atividades multimídia, aulas de idiomas e promovem um estudo mais concentrado e inclusivo. O manuseio correto dos cabos e o armazenamento adequado mantêm os aparelhos funcionando perfeitamente por muito mais tempo.
+            </p>
+        </div>
 
-        <figure>
-            <img src="sala de aula.jpg" alt="Sala de aula">
-            <figcaption><b>Antes e depois - Sala de aula</b></figcaption>
-        </figure>
+        <!-- QUADRO -->
+        <div class="item-card">
+            <figure>
+                <img src="quadro.jpg" alt="Quadro">
+                <figcaption><b>Antes e Depois: Quadro de Giz/Branco</b></figcaption>
+            </figure>
+            <p class="descricao">
+                O quadro é o centro das explicações dos nossos professores. Manter a superfície limpa, utilizar apenas os marcadores ou gizes adequados e zelar pela estrutura evita desgaste precoce e facilita a visualização do conteúdo das aulas para toda a turma.
+            </p>
+        </div>
 
-        <figure>
-            <img src="ventilador.jpg" alt="Ventilador">
-            <figcaption><b>Antes e depois - Ventilador</b></figcaption>
-        </figure>
+        <!-- SALA DE AULA -->
+        <div class="item-card">
+            <figure>
+                <img src="sala de aula.jpg" alt="Sala de aula">
+                <figcaption><b>Antes e Depois: Organização da Sala de Aula</b></figcaption>
+            </figure>
+            <p class="descricao">
+                Uma sala de aula limpa e organizada melhora a concentração e o bem-estar de todos. Descartar o lixo nas lixeiras adequadas, manter as filas organizadas e cuidar da ventilação e iluminação cria um ambiente propício e agradável para o aprendizado diário.
+            </p>
+        </div>
 
-        <p style="text-align: center;"> O cuidado com o patrimônio da escola é responsabilidade <br>
-        de todos os estudantes e funcionários, os bens duráveis são importantes para o desenvolvimento <br>
-        dos estudantes e gera um ambiente melhor para todos os envolvidos.</p>
+        <!-- VENTILADOR -->
+        <div class="item-card">
+            <figure>
+                <img src="ventilador.jpg" alt="Ventilador">
+                <figcaption><b>Antes e Depois: Ventiladores da Escola</b></figcaption>
+            </figure>
+            <p class="descricao">
+                Em dias quentes, os ventiladores mantêm o ambiente fresco e propício para o estudo. Zelar pelo funcionamento dos equipamentos, sem arremessar objetos ou mexer nas fiações, garante a segurança de todos e o conforto térmico nas salas de aula.
+            </p>
+        </div>
+
+        <div class="mensagem-final">
+            <p><b>Conclusão:</b></p>
+            <p>
+                O cuidado com o patrimônio da escola é responsabilidade de todos os estudantes, professores e funcionários. Os bens duráveis são fundamentais para o desenvolvimento educacional e proporcionam um ambiente mais agradável, seguro e acolhedor para toda a comunidade escolar!
+            </p>
+        </div>
 
     </div>
 </body>
+
 </html>
